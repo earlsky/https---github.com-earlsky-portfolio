@@ -1,0 +1,48 @@
+    _    ___   ____            _        ___    _                
+   / \  |_ _| |  _ \ _ __ ___ (_)_  __ |_ _|__| | ___  __ _ ___ 
+  / _ \  | |  | |_) | '__/ _ \| \ \/ /  | |/ _` |/ _ \/ _` / __|
+ / ___ \ | |  |  __/| | | (_) | |>  <   | | (_| |  __/ (_| \__ \
+/_/   \_\___| |_|   |_|  \___// /_/\_\ |___\__,_|\___|\__,_|___/
+                            |__/                                
+
+1 Building MULTI-AGENT system w CrewAI
+---
+A multi-agent system is a group of AI agents that collaborate, divide tasks, and solve complex problems together, just like a team.
+
+Tech stacks:
+CrewAI for multi-agent coordination
+LangChain for tool-building
+OpenAI / Claude / Llama3 for LLMs
+Pinecone / Chroma for memory
+
+
+2 Designing MULTIMODAL AI Model
+---
+Multimodal AI models can simultaneously understand and generate content from multiple data types, including images, text, audio, and video.
+
+Tech stacks:
+Hugging Face Transformers for CLIP
+PyTorch or TensorFlow
+Libra for audio feature extraction
+OpenAI Whisper for speech-to-text
+
+
+3 Developing a PREDICTIVE KEYBOARD Model
+---
+A predictive keyboard learns from past text to suggest the next word or phrase.
+
+Tech stacks:
+PyTorch or TensorFlow
+Tokenizers from Hugging Face
+Datasets: WikiText, or Sherlock Holmes novels
+
+
+4 Analyzing LARGE DOCUMENTS with LLMs
+---
+It involves processing documents of 100+ pages, such as legal contracts, to extracts summaries, FAQs, and key insights.
+
+Tech stacks:
+LangChain + OpenAI / Cohere
+ChromaDB / Pinecone for vector search
+Transformers (BART, T5, Longformer)
+PyMuPDF / PDFPlumber for PDF parsing

@@ -1,0 +1,13 @@
+WEDDING PHOTO SHARING APP
+
+Ex:
+Wedding Photo Swap:
+	allow guests to upload photos and vids directly to private album, creating live feed of 	wedding day
+Wedibox:
+	QR code solution allow guest to capture, share photos, vids, msgs during event, offering 	seamless exp from capturing and reliving cherished memories
+Guestpix:
+	private photo sharing website and digital guestbook that uses QE code or private link to 	collect wedding guest pics and vids in all-in-one digital gallery 
+Eversnap:
+	allow guests to collect candid photos and vids in one private online album, w features 		like filters and sharing built in 
+Shutterfly:
+	lets you create online gallery for wedding pics, where guests can view, download, and 		order prints. Can turn pics into gifts or albums

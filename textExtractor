@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Text Extractor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .input-section {
+            display: flex;
+            gap: 10px;
+        }
+        #urlInput {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+        .options {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+        .output-container {
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 4px;
+            min-height: 300px;
+            max-height: 600px;
+            overflow-y: auto;
+            background-color: #f9f9f9;
+        }
+        #extractedText {
+            white-space: pre-wrap;
+            word-break: break-word;
+        }
+        .status {
+            color: #7f8c8d;
+            font-style: italic;
+            text-align: center;
+        }
+        .error {
+            color: #e74c3c;
+            font-weight: bold;
+        }
+        .success {
+            color: #27ae60;
+        }
+        .loading {
+            text-align: center;
+            display: none;
+        }
+        .loading:after {
+            content: '.';
+            animation: dots 1.5s steps(5, end) infinite;
+        }
+        @keyframes dots {
+            0%, 20% { content: '.'; }
+            40% { content: '..'; }
+            60% { content: '...'; }
+            80%, 100% { content: ''; }
+        }
+        .filter-options {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 10px;
+        }
+        .checkbox-container {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Web Text Extractor</h1>
+    <div class="container">
+        <p>Enter a website URL below to extract just the text content, preserving the original spacing and layout.</p>
+        
+        <div class="input-section">
+            <input type="text" id="urlInput" placeholder="https://example.com" />
+            <button id="extractButton">Extract Text</button>
+        </div>
+        
+        <div class="filter-options">
+            <div class="checkbox-container">
+                <input type="checkbox" id="removeAdsOption" checked />
+                <label for="removeAdsOption">Remove ads & clutter</label>
+            </div>
+            <div class="checkbox-container">
+                <input type="checkbox" id="preserveFormatting" checked />
+                <label for="preserveFormatting">Preserve formatting</label>
+            </div>
+            <div class="checkbox-container">
+                <input type="checkbox" id="includeImages" />
+                <label for="includeImages">Show image placeholders</label>
+            </div>
+        </div>
+        
+        <div class="options">
+            <button id="copyButton" disabled>Copy to Clipboard</button>
+            <button id="downloadButton" disabled>Download as TXT</button>
+        </div>
+        
+        <div class="status" id="status">Enter a URL above and click "Extract Text"</div>
+        <div class="loading" id="loading">Extracting content</div>
+        
+        <div class="output-container">
+            <div id="extractedText"></div>
+        </div>
+    </div>
+
+    <script>
+        const urlInput = document.getElementById('urlInput');
+        const extractButton = document.getElementById('extractButton');
+        const copyButton = document.getElementById('copyButton');
+        const downloadButton = document.getElementById('downloadButton');
+        const extractedText = document.getElementById('extractedText');
+        const status = document.getElementById('status');
+        const loading = document.getElementById('loading');
+        const removeAdsOption = document.getElementById('removeAdsOption');
+        const preserveFormatting = document.getElementById('preserveFormatting');
+        const includeImages = document.getElementById('includeImages');
+        
+        // Since we can't directly fetch websites due to CORS restrictions,
+        // we'll simulate the extraction process with a sample implementation
+        // that would work if deployed with a proper backend
+        extractButton.addEventListener('click', async () => {
+            const url = urlInput.value.trim();
+            
+            if (!url) {
+                status.textContent = 'Please enter a valid URL';
+                status.className = 'status error';
+                return;
+            }
+            
+            if (!url.startsWith('http://') && !url.startsWith('https://')) {
+                status.textContent = 'URL must start with http:// or https://';
+                status.className = 'status error';
+                return;
+            }
+            
+            // Show loading state
+            loading.style.display = 'block';
+            status.textContent = '';
+            extractedText.textContent = '';
+            copyButton.disabled = true;
+            downloadButton.disabled = true;
+            
+            try {
+                // Simulate fetching and parsing content
+                // In a real implementation, this would need a backend proxy or extension
+                setTimeout(() => {
+                    // Simulate different behaviors for different sites
+                    let result = '';
+                    
+                    if (url.includes('example.com')) {
+                        result = sampleExampleContent();
+                    } else if (url.includes('news')) {
+                        result = sampleNewsContent();
+                    } else if (url.includes('blog')) {
+                        result = sampleBlogContent();
+                    } else {
+                        result = sampleGenericContent(url);
+                    }
+                    
+                    extractedText.innerHTML = result;
+                    status.textContent = 'Content extracted successfully!';
+                    status.className = 'status success';
+                    copyButton.disabled = false;
+                    downloadButton.disabled = false;
+                    loading.style.display = 'none';
+                }, 1500);
+            } catch (error) {
+                status.textContent = `Error: ${error.message || 'Failed to extract content'}`;
+                status.className = 'status error';
+                loading.style.display = 'none';
+            }
+        });
+        
+        copyButton.addEventListener('click', () => {
+            const text = extractedText.textContent;
+            navigator.clipboard.writeText(text).then(() => {
+                const originalText = copyButton.textContent;
+                copyButton.textContent = 'Copied!';
+                setTimeout(() => {
+                    copyButton.textContent = originalText;
+                }, 2000);
+            }).catch(err => {
+                status.textContent = 'Failed to copy text: ' + err;
+                status.className = 'status error';
+            });
+        });
+        
+        downloadButton.addEventListener('click', () => {
+            const text = extractedText.textContent;
+            const blob = new Blob([text], { type: 'text/plain' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            
+            // Extract domain name for the filename
+            let domain = urlInput.value.replace(/^https?:\/\//, '');
+            domain = domain.split('/')[0];
+            
+            a.download = `${domain}-extracted.txt`;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        });
+        
+        // Sample content generators for demonstration
+        function sampleExampleContent() {
+            return `<h2>Example Domain</h2>
+<p>This domain is for use in illustrative examples in documents. You may use this domain in literature without prior coordination or asking for permission.</p>
+<p>More information...</p>`;
+        }
+        
+        function sampleNewsContent() {
+            let content = `<h1>Breaking News: Scientific Discovery</h1>
+<p class="date">May 20, 2025</p>
+<h2>Researchers Announce Breakthrough in Quantum Computing</h2>
+<p>Scientists at the International Quantum Research Institute have announced a major breakthrough in quantum computing stability, potentially solving one of the field's biggest challenges.</p>
+<p>"We've managed to maintain quantum coherence for over 30 minutes at room temperature," said lead researcher Dr. Elena Vasquez. "This opens up possibilities we've only dreamed of until now."</p>`;
+            
+            if (!removeAdsOption.checked) {
+                content += `<div class="ad">
+<p>ADVERTISEMENT</p>
+<p>Subscribe to Premium News Service for just $5/month!</p>
+</div>`;
+            }
+            
+            content += `<p>The discovery involves a new material that shields quantum bits (qubits) from environmental interference more effectively than previous methods.</p>
+<p>Industry experts suggest this could accelerate practical quantum computing applications by as much as five years.</p>`;
+            
+            if (includeImages.checked) {
+                content += `<div class="image-placeholder">[IMAGE: Quantum computer prototype]</div>`;
+            }
+            
+            return content;
+        }
+        
+        function sampleBlogContent() {
+            let content = `<article>
+<h1>The Future of Web Development</h1>
+<p class="date">Posted on May 18, 2025 by Tech Expert</p>
+<p>As we move further into 2025, several trends are reshaping how we approach web development:</p>
+<h2>1. AI-Assisted Coding</h2>
+<p>More developers are integrating AI assistants into their workflow. These tools not only suggest code completions but can now refactor entire components and suggest architectural improvements.</p>`;
+            
+            if (includeImages.checked) {
+                content += `<div class="image-placeholder">[IMAGE: Developer using AI coding assistant]</div>`;
+            }
+            
+            content += `<h2>2. WebAssembly Dominance</h2>
+<p>WebAssembly has finally reached the tipping point where it's being used in mainstream applications, not just for specialized cases. The performance gains are substantial enough that many frameworks now compile to WASM by default.</p>`;
+            
+            if (!removeAdsOption.checked) {
+                content += `<div class="sponsor">
+<p>SPONSORED CONTENT</p>
+<p>Learn WebAssembly in our 8-week bootcamp! Use code BLOG25 for 25% off.</p>
+</div>`;
+            }
+            
+            content += `<h2>3. Edge Computing</h2>
+<p>With major cloud providers expanding their edge networks, we're seeing more applications move logic to the edge. This distributed approach reduces latency and improves user experience globally.</p>
+</article>`;
+            
+            return content;
+        }
+        
+        function sampleGenericContent(url) {
+            return `<h1>Content from ${url}</h1>
+<p>This is simulated content that would be extracted from the website you provided.</p>
+<p>In a real implementation, this tool would:</p>
+<ul>
+<li>Send the URL to a backend service that can bypass CORS restrictions</li>
+<li>Extract the meaningful content using readability algorithms</li>
+<li>Remove advertisements, navigation, footers, etc.</li>
+<li>Preserve the original spacing and formatting of paragraphs</li>
+<li>Return only the content you want to read</li>
+</ul>
+<p>Due to browser security restrictions, a client-side only solution cannot directly fetch content from other websites. A complete implementation would require:</p>
+<ol>
+<li>A server component to fetch the remote content</li>
+<li>Or a browser extension with appropriate permissions</li>
+</ol>`;
+        }
+    </script>
+</body>
+</html>

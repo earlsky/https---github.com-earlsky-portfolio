@@ -1,0 +1,124 @@
+TextRPG - Life in EnoIX / Xineo / NeoIX(9) / Inxeo / Oxien / EONIX(secret)
+==========================================================================
+Rated PG13
+Art Style=Wold of Final Fantasy MAXIMA (Lillikin)
+
+userName = input("What shall we call you?")
+
+
+Different Cities=different adventures,tasks,friends,enemies
+
+
+Create ASCII art from .jpg..... https://dev.to/stokry/create-ascii-art-with-python-31nd
+
+
+EnoIX(Corporate & Business)
+	CEO, Chairman, Director, Managing Director, Principal, Executive, 	Founder
+
+
+XINOE(Government & Political)
+	Head of State, Commander-in-Chief, Premier, Chancellor, PrimeMinister, 	Governor, Leader
+	
+
+NEOIX9(city)
+9 BOSS total: 3 in NeoIX / 3 in Inxeo / 3 in Oxien
+MAFIA , YAKUZA , INITIAL 4D , MIDNIGHT CLUB , Final Boss called BOSS by peers (name revealed later as cutscene flashback as to why BOSS became the way he became)
+	BOSS, BigKahuna, TopDog, HeadHoncho, BigCheese, BigShot, TopBrass, 	ElJefe, GrandPoobah, BigWig, TheMan, HeadNerdInCharge, NCOIC, OIC, 	AIC, ShotCaller, MainMan, TopCat, NumeroUno, KingPin
+
+
+INXEO(city)
+	Gov
+
+OXIEN(city)
+	Knight EJ
+
+EONIX(secret city)
+	earl.sky(9 forms) 
+		ATK,DEF,MANA,LUCK/CRIT,STRAT,FIRE,ICE,ELECTRIC,ULTIMATE
+
++----------------+
+|INVENTORY SYSTEM|
++----------------+
+apartment(studio/1ba), house(3bd/2ba/2carGarage), highRiseStudio(1bd/1ba/1carGarage)
+
++----------------------------------+
+|CHAR LVL UP SYS, TRAITS/ATTRIBUTES|
++----------------------------------+
+reference(DragonAge, FallOut, ElderRing, MapleStory)
+
+Life Health ❤️
+
+Strength ATK 🗡️
+
+Resilience DEF 🛡️
+
+Intelligence MANA 🧪
+
+Charm LUCK/CRIT 🍀
+
+Stamina ActionPoints ⭐️
+
+ULT gauge ⚠️
+
+Initiative SPD 🏎️
+
+IX(i9) Transformation
+
+
++------------------+
+|CLASS / SKILL TREE|
++------------------+
+Warrior/exSoldier
+	skill
+
+Magician/Hacker
+	skill
+
+Assassin/Spy
+	skill
+ 
+Peasant/UNDERDOG 
+	0 stats = unlock secret EONIX city
+
++-----+
+|ITEMS|
++-----+
+ACTIVE
+	HEALING
+		apple, orange, bobaMilkTea, spinach, 
+	ATTACK
+		throwingKnife, 
+PASSIVE
+	HEALING
+		
+	ATTACK
+		
+
++-----------------+
+|MERC - HIRED HELP|
++-----------------+
+
+
++----+
+|PETS|
++----+
+Wolf
+	stat
+Robot
+	stat
+Fox
+	stat
+
++----------+
+|MINI GAMES|
++----------+
+Slots
+Roulette
+StockMarket
+
++------------+
+|BATTLE PHASE|
++------------+
+
+
+

@@ -1,0 +1,17 @@
+body {
+    background: #11131e;
+    font-family: 'Varela', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100hv;
+    width: 90vw;
+}
+
+.glitch {
+    color: white;
+    font-size: 100px;
+    position: relative;
+    width: 400px;
+    margin: 0 auto;
+}

@@ -1,0 +1,64 @@
+Architecture
+---
+
+PORTFOLIO
+
+|- 🏠 index.html (HOME) 🏠
+|- 📁 assets
+   |-
+
+   |- 📁 SWE
+      |- 🏠 swe.html (home)
+      |- 
+      |- 
+
+   |- 📁 HEALTHCARE
+      |- 🏠 healthcare.html (home)
+      |- AWS-exp.html (AWS expiration tracker)
+      |- baxter-IVP-exp.html (IVP exp roomtemp
+      |- eve-chemo-list
+      |- sea-inpt-med-locator
+      |- vancomycin-calc
+      |- tpn-calc
+      |- 
+
+   |- 📁 EDUCATION
+      |- 🏠 education.html (home)
+      |- flashcards.html
+         |- cloud-foundations.json
+         |- 
+         |- 
+
+   |- 📁 FINANCE
+      |- 🏠 finance.html (home)
+      |- net-income-calc
+      |- 
+
+
+   |- 📁 GAMES
+      |- 🏠 games.html (home)
+      |- snake.html
+      |- chess.html
+      |- checkers.html
+      |- blackjack.html
+      |- roulette.html
+      |- 
+
+   |- 📁 PERSONAL
+      |- 🏠 personal.html (home)
+      |- resume.html
+      |- photos.html
+      |- videos.html
+      |- digital-art.html
+      |- terminal-visualizer
+      |- 
+|-
+|- README.md
+|- architecture
+|- web templates
+
+3spaces to next directory
+
+Architecture
+Assets
+References
