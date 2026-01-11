@@ -1,0 +1,46 @@
+EVENT COORDINATOR
+
+SignIn/Up - Create user:
+---
+Verification
+Via phone
+Gmail/Facebook/Email
+
+Price - $
+---
+
+
+Position - Name
+---
+DJ - name (RSVP yes/no)
+DJ - name (RSVP yes/no)
+DJ - name (RSVP yes/no)
+Car Registration - name (RSVP yes/no)
+Car Registration - name (RSVP yes/no)
+Car Registration - name (RSVP yes/no)
+Car Registration - name (RSVP yes/no)
+Car Registration - name (RSVP yes/no)
+Sponsor - name (RSVP yes/no)
+Sponsor - name (RSVP yes/no)
+Sponsor - name (RSVP yes/no)
+Sponsor - name (RSVP yes/no)
+Retail - name (RSVP yes/no)
+Retail - name (RSVP yes/no)
+Retail - name (RSVP yes/no)
+Retail - name (RSVP yes/no)
+
+Map (legend/icons)
+---
+North/East/South/West (desc)
+Restroom (desc)
+Food (desc)
+Main Entrance/Exit (desc)
+
+FAQs
+---
+
+
+POC
+---
+Email
+Phone
