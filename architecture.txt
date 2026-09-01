@@ -15,7 +15,7 @@ PORTFOLIO
    |- 📁 HEALTHCARE
       |- 🏠 healthcare.html (home)
       |- AWS-exp.html (AWS expiration tracker)
-      |- baxter-IVP-exp.html (IVP exp roomtemp
+      |- baxter-IVP-exp.html (IVP exp roomtemp)
       |- eve-chemo-list
       |- sea-inpt-med-locator
       |- vancomycin-calc
